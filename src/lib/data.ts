@@ -159,10 +159,17 @@ export const neighborhoods: Neighborhood[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-  { name: 'Arif Ahmed', role: 'Property Expert', image: '/images/openart-image_vH9RjfW8_1722901157516_raw.jpg' },
-  { name: 'Aresha Arif', role: 'Property Consultant', image: '/images/openart-image_McdgQayN_1722901087050_raw.jpg' },
-  { name: 'Raheel Surti', role: 'Sales Manager', image: '/images/openart-image_LLHTl9Ha_1722900761544_raw.jpg' },
-  { name: 'Rehan Shah', role: 'Partner', image: '/images/openart-image_pOlOF7Nh_1722900839764_raw.jpg' },
+  // Owners - Top Row
+  { name: 'Aresha Arif', role: 'Partner & Downtown Specialist', image: '/images/aresha_arif_owner.jpg' },
+  { name: 'Arif Ahmed', role: 'Co-founder & Creek Harbour Specialist', image: '/images/arif_ahmed_owner.jpg' },
+  // Property Consultants - Bottom Row
+  { name: 'Jacob Martis', role: 'Property Consultant', image: '/images/openart-image_vH9RjfW8_1722901157516_raw.jpg' },
+  { name: 'Fay Guzman', role: 'Property Consultant', image: '/images/openart-image_LLHTl9Ha_1722900761544_raw.jpg' },
+  { name: 'Raheel Surti', role: 'Property Consultant', image: '/images/openart-image_pOlOF7Nh_1722900839764_raw.jpg' },
+  { name: 'Maria Santos', role: 'Property Consultant', image: '/images/openart-image_O2wpQ37F_1722901211707_raw.jpg' },
+  { name: 'Rehan Shah', role: 'Property Consultant', image: '/images/openart-image_GkYBn8F6_1722901147044_raw.jpg' },
+  { name: 'Hannah Martinez', role: 'Property Consultant', image: '/images/openart-image_McdgQayN_1722901087050_raw.jpg' },
+  { name: 'Tara Singh', role: 'Property Consultant', image: '/images/openart-image_RqbadDZc_1722900972864_raw.jpg' },
 ];
 
 export const investmentBenefits = [
