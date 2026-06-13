@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="bg-slate-950 py-12 border-t border-white/10">
@@ -8,12 +10,18 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">AR</span>
+              <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+                <Image
+                  src="/images/logo.jpeg"
+                  alt="Aresha Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="text-white font-bold text-xl tracking-tight">Aresha</span>
-                <span className="block text-gold-500 text-xs tracking-widest uppercase">Real Estate</span>
+                <span className="block text-gold-500 text-[10px] tracking-[0.2em] uppercase">Real Estate</span>
               </div>
             </div>
             <p className="text-gray-400 text-sm max-w-md">

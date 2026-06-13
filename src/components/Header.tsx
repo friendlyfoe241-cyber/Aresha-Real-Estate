@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,12 +22,19 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl">AR</span>
+            <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+              <Image
+                src="/images/logo.jpeg"
+                alt="Aresha Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="hidden sm:block">
               <span className="text-white font-bold text-xl tracking-tight">Aresha</span>
-              <span className="block text-gold-500 text-xs tracking-widest uppercase">Real Estate</span>
+              <span className="block text-gold-500 text-[10px] tracking-[0.2em] uppercase">Real Estate</span>
+              <span className="block text-gray-400 text-[9px] tracking-wide">Premium Properties in Dubai</span>
             </div>
           </a>
 
