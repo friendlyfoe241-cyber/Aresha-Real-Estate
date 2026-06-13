@@ -4,8 +4,8 @@ import PropertyCard from './PropertyCard';
 import { properties } from '@/lib/data';
 
 export default function PropertiesSection() {
-  const featuredProperties = properties.filter(p => p.featured);
-  const allProperties = properties;
+  const featuredProperties = properties.filter(p => p.featured).slice(0, 3);
+  const allProperties = properties.filter(p => !p.featured);
 
   return (
     <section id="properties" className="py-24 bg-gray-50">
@@ -22,16 +22,16 @@ export default function PropertiesSection() {
           <div className="section-divider w-24 mx-auto mt-6" />
         </div>
 
-        {/* Featured Properties */}
+        {/* Featured Properties - Only 3 with Carousel */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredProperties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
+            <PropertyCard key={property.id} property={property} showCarousel={true} />
           ))}
         </div>
 
         {/* All Properties */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {allProperties.filter(p => !p.featured).map((property) => (
+          {allProperties.map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}
         </div>

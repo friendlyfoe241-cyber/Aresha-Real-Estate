@@ -1,16 +1,49 @@
 'use client';
 
 import Image from 'next/image';
-import { Bed, Bath, Maximize, MapPin } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Bed, Bath, Maximize, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Property } from '@/lib/data';
 
-export default function PropertyCard({ property }: { property: Property }) {
+interface PropertyCardProps {
+  property: Property;
+  showCarousel?: boolean;
+}
+
+export default function PropertyCard({ property, showCarousel = false }: PropertyCardProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = property.images && property.images.length > 0 
+    ? property.images 
+    : [property.image];
+
+  useEffect(() => {
+    if (!showCarousel || images.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [showCarousel, images.length]);
+
+  const goToPrevious = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToNext = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
   return (
     <div className="property-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl">
       {/* Image Container */}
-      <div className="relative h-64 overflow-hidden">
+      <div className={`relative ${showCarousel ? 'h-80' : 'h-64'} overflow-hidden`}>
         <Image
-          src={property.image}
+          src={images[currentImageIndex]}
           alt={property.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -22,6 +55,33 @@ export default function PropertyCard({ property }: { property: Property }) {
           <div className="absolute top-4 left-4 px-3 py-1 bg-gold-500 text-slate-900 text-xs font-bold rounded-full">
             FEATURED
           </div>
+        )}
+
+        {/* Image Counter */}
+        {showCarousel && images.length > 1 && (
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 bg-black/60 text-white text-xs font-medium rounded-full">
+            {currentImageIndex + 1}/{images.length}
+          </div>
+        )}
+
+        {/* Navigation Arrows */}
+        {showCarousel && images.length > 1 && (
+          <>
+            <button
+              onClick={goToPrevious}
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </>
         )}
 
         {/* Price Tag */}

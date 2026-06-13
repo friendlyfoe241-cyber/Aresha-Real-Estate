@@ -10,18 +10,32 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+              <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg flex-shrink-0 flex items-center justify-center bg-white/10">
                 <Image
-                  src="/images/logo.jpeg"
+                  src="/images/logo-main.png"
                   alt="Aresha Logo"
                   width={48}
-                  height={48}
-                  className="w-full h-full object-cover"
+                  height={27}
+                  className="w-full h-auto object-contain"
                 />
               </div>
-              <div>
-                <span className="text-white font-bold text-xl tracking-tight">Aresha</span>
-                <span className="block text-gold-500 text-[10px] tracking-[0.2em] uppercase">Real Estate</span>
+              <div className="hidden sm:block">
+                <div className="relative h-5 w-36 overflow-hidden">
+                  <Image
+                    src="/images/logo-company.png"
+                    alt="Aresha Real Estate"
+                    fill
+                    className="w-full h-auto object-contain object-left"
+                  />
+                </div>
+                <div className="relative h-2.5 w-48 overflow-hidden mt-0.5">
+                  <Image
+                    src="/images/logo-slogan.png"
+                    alt="Premium Properties in Dubai"
+                    fill
+                    className="w-full h-auto object-contain object-left"
+                  />
+                </div>
               </div>
             </div>
             <p className="text-gray-400 text-sm max-w-md">

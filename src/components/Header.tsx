@@ -22,19 +22,32 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+            <div className="w-14 h-14 rounded-lg overflow-hidden shadow-lg flex-shrink-0 flex items-center justify-center bg-white/10">
               <Image
-                src="/images/logo.jpeg"
+                src="/images/logo-main.png"
                 alt="Aresha Logo"
-                width={48}
-                height={48}
-                className="w-full h-full object-cover"
+                width={56}
+                height={32}
+                className="w-full h-auto object-contain"
               />
             </div>
-            <div className="hidden sm:block">
-              <span className="text-white font-bold text-xl tracking-tight">Aresha</span>
-              <span className="block text-gold-500 text-[10px] tracking-[0.2em] uppercase">Real Estate</span>
-              <span className="block text-gray-400 text-[9px] tracking-wide">Premium Properties in Dubai</span>
+            <div className="hidden sm:flex flex-col gap-0.5">
+              <div className="relative h-5 w-36 overflow-hidden">
+                <Image
+                  src="/images/logo-company.png"
+                  alt="Aresha Real Estate"
+                  fill
+                  className="w-full h-auto object-contain object-left"
+                />
+              </div>
+              <div className="relative h-2.5 w-48 overflow-hidden">
+                <Image
+                  src="/images/logo-slogan.png"
+                  alt="Premium Properties in Dubai"
+                  fill
+                  className="w-full h-auto object-contain object-left"
+                />
+              </div>
             </div>
           </a>
 
