@@ -22,7 +22,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3">
-            <div className="w-14 h-14 rounded-lg overflow-hidden shadow-lg flex-shrink-0 flex items-center justify-center bg-white/10">
+            <div className="w-14 h-14 rounded-lg shadow-lg flex-shrink-0 flex items-center justify-center bg-white">
               <Image
                 src="/images/logo-main.png"
                 alt="Aresha Logo"
@@ -31,7 +31,7 @@ export default function Header() {
                 className="w-full h-auto object-contain"
               />
             </div>
-            <div className="hidden sm:flex flex-col gap-0.5">
+            <div className="hidden sm:flex flex-col gap-0.5 bg-white/90 px-2 py-1 rounded-md">
               <div className="relative h-5 w-36 overflow-hidden">
                 <Image
                   src="/images/logo-company.png"

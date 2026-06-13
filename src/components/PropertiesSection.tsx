@@ -5,7 +5,6 @@ import { properties } from '@/lib/data';
 
 export default function PropertiesSection() {
   const featuredProperties = properties.filter(p => p.featured).slice(0, 3);
-  const allProperties = properties.filter(p => !p.featured);
 
   return (
     <section id="properties" className="py-24 bg-gray-50">
@@ -26,13 +25,6 @@ export default function PropertiesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredProperties.map((property) => (
             <PropertyCard key={property.id} property={property} showCarousel={true} />
-          ))}
-        </div>
-
-        {/* All Properties */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {allProperties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
           ))}
         </div>
 
