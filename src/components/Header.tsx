@@ -31,7 +31,7 @@ export default function Header() {
                 className="w-full h-auto object-contain"
               />
             </div>
-            <div className="hidden sm:flex flex-col gap-0.5 bg-white/90 px-2 py-1 rounded-md">
+            <div className="hidden sm:flex flex-col gap-0.5 bg-white/90 px-2 py-1 rounded-md flex-shrink-0">
               <div className="relative h-5 w-36 overflow-hidden">
                 <Image
                   src="/images/logo-company.png"
