@@ -22,25 +22,10 @@ export default function PropertiesSection() {
         </div>
 
         {/* Featured Properties - Only 3 with Carousel */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProperties.map((property) => (
             <PropertyCard key={property.id} property={property} showCarousel={true} />
           ))}
-        </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <a
-            href="https://wa.me/971501234567?text=I'm interested in viewing more properties"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white font-semibold rounded-xl hover:bg-gold-500 hover:text-slate-900 transition-all duration-300"
-          >
-            Browse More Properties
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>
