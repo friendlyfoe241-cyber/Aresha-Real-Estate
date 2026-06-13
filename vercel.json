@@ -20,17 +20,5 @@
         }
       ]
     }
-  ],
-  "images": {
-    "remotePatterns": [
-      {
-        "protocol": "https",
-        "hostname": "static.wixstatic.com"
-      },
-      {
-        "protocol": "https",
-        "hostname": "smartarget-sp.ams3.cdn.digitaloceanspaces.com"
-      }
-    ]
-  }
+  ]
 }
