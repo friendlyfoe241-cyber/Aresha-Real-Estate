@@ -159,10 +159,10 @@ export const neighborhoods: Neighborhood[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-  { name: 'Arif Ahmed', role: 'Property Expert', image: '/images/arif_ahmed.jpeg' },
-  { name: 'Aresha Arif', role: 'Property Consultant', image: '/images/logo.jpeg' },
-  { name: 'Raheel Surti', role: 'Sales Manager', image: '/images/raheel_surti.jpg' },
-  { name: 'Rehan Shah', role: 'Partner', image: '/images/rehan_shah.jpg' },
+  { name: 'Arif Ahmed', role: 'Property Expert', image: '/images/openart-image_vH9RjfW8_1722901157516_raw.jpg' },
+  { name: 'Aresha Arif', role: 'Property Consultant', image: '/images/openart-image_McdgQayN_1722901087050_raw.jpg' },
+  { name: 'Raheel Surti', role: 'Sales Manager', image: '/images/openart-image_LLHTl9Ha_1722900761544_raw.jpg' },
+  { name: 'Rehan Shah', role: 'Partner', image: '/images/openart-image_pOlOF7Nh_1722900839764_raw.jpg' },
 ];
 
 export const investmentBenefits = [
