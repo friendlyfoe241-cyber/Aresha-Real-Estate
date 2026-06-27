@@ -1,90 +1,45 @@
-# Aresha Real Estate Website
+# Git Integration & Wix CLI <img align="left" src="https://user-images.githubusercontent.com/89579857/185785022-cab37bf5-26be-4f11-85f0-1fac63c07d3b.png">
 
-A premium, modern real estate website built with Next.js 14 and Tailwind CSS, deployable on Vercel.
+This repo is part of Git Integration & Wix CLI, a set of tools that allows you to write, test, and publish code for your Wix site locally on your computer. 
 
-## Features
+Connect your site to GitHub, develop in your favorite IDE, test your code in real time, and publish your site from the command line.
 
-- **Modern Design**: Clean, professional UI with gold and emerald accent colors
-- **Responsive**: Fully responsive across all devices
-- **WhatsApp Integration**: Direct contact via WhatsApp
-- **Property Listings**: Featured properties with detailed information
-- **Team Section**: Meet the team members
-- **Contact Form**: Easy inquiry submission
-- **SEO Optimized**: Meta tags and semantic HTML
+## Set up this repository in your IDE
+This repo is connected to a Wix site. That site tracks this repo's default branch. Any code committed and pushed to that branch from your local IDE appears on the site.
 
-## Tech Stack
+Before getting started, make sure you have the following things installed:
+* [Git](https://git-scm.com/download)
+* [Node](https://nodejs.org/en/download/), version 14.8 or later.
+* [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [yarn](https://yarnpkg.com/getting-started/install)
+* An SSH key [added to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Deployment**: Vercel
+To set up your local environment and start coding locally, do the following:
 
-## Getting Started
+1. Open your terminal and navigate to where you want to store the repo.
+1. Clone the repo by running `git clone <your-repository-url>`.
+1. Navigate to the repo's directory by running `cd <directory-name>`.
+1. Install the repo's dependencies by running `npm install` or `yarn install`.
+1. Install the Wix CLI by running `npm install -g @wix/cli` or `yarn global add @wix/cli`.  
+   Once you've installed the CLI globally, you can use it with any Wix site's repo.
 
-### Local Development
+For more information, see [Setting up Git Integration & Wix CLI](https://support.wix.com/en/article/velo-setting-up-git-integration-wix-cli-beta).
 
-```bash
-# Install dependencies
-npm install
+## Write Velo code in your IDE
+Once your repo is set up, you can write code in it as you would in any other non-Wix project. The repo's file structure matches the [public](https://support.wix.com/en/article/velo-working-with-the-velo-sidebar#public), [backend](https://support.wix.com/en/article/velo-working-with-the-velo-sidebar#backend), and [page code](https://support.wix.com/en/article/velo-working-with-the-velo-sidebar#page-code) sections in Editor X.
 
-# Run development server
-npm run dev
+Learn more about [this repo's file structure](https://support.wix.com/en/article/velo-understanding-your-sites-github-repository-beta).
 
-# Build for production
-npm run build
+## Test your code with the Local Editor
+The Local Editor allows you test changes made to your site in real time. The code in your local IDE is synced with the Local Editor, so you can test your changes before committing them to your repo. You can also change the site design in the Local Editor and sync it with your IDE.
 
-# Start production server
-npm start
-```
+Start the Local Editor by navigating to this repo's directory in your terminal and running `wix dev`.
 
-### Deploy to Vercel
+For more information, see [Working with the Local Editor](https://support.wix.com/en/article/velo-working-with-the-local-editor-beta).
 
-1. Push this repository to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import the repository
-4. Vercel will automatically detect Next.js and deploy
+## Preview and publish with the Wix CLI
+The Wix CLI is a tool that allows you to work with your site locally from your computer's terminal. You can use it to build a preview version of your site and publish it. You can also use the CLI to install [approved npm packages](https://support.wix.com/en/article/velo-working-with-npm-packages) to your site.
 
-Or use the Vercel CLI:
+Learn more about [working with the Wix CLI](https://support.wix.com/en/article/velo-working-with-the-wix-cli-beta).
 
-```bash
-npm i -g vercel
-vercel
-```
-
-## Project Structure
-
-```
-├── src/
-│   ├── app/
-│   │   ├── globals.css     # Global styles
-│   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Home page
-│   ├── components/
-│   │   ├── Header.tsx
-│   │   ├── Hero.tsx
-│   │   ├── AboutSection.tsx
-│   │   ├── PropertiesSection.tsx
-│   │   ├── PropertyCard.tsx
-│   │   ├── ServicesSection.tsx
-│   │   ├── NeighborhoodsSection.tsx
-│   │   ├── TeamSection.tsx
-│   │   ├── ContactSection.tsx
-│   │   └── Footer.tsx
-│   └── lib/
-│       └── data.ts         # Property and content data
-├── public/
-├── vercel.json             # Vercel configuration
-├── tailwind.config.js
-├── next.config.js
-└── package.json
-```
-
-## Contact
-
-- **Phone**: +971 50 123 4567
-- **Email**: info@aresharealestate.com
-- **Address**: Office 1965, Tamani Arts Offices, Business Bay, Dubai, U.A.E
-
-## License
-
-Private - All rights reserved
+## Invite contributors to work with you
+Git Integration & Wix CLI extends Editor X's [concurrent editing](https://support.wix.com/en/article/editor-x-about-concurrent-editing) capabilities. Invite other developers as collaborators on your [site](https://support.wix.com/en/article/inviting-people-to-contribute-to-your-site) and your [GitHub repo](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository). Multiple developers can work on a site's code at once.
